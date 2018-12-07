@@ -1,0 +1,180 @@
+body {
+  background-color: linear-gradient(
+    to bottom right,
+    rgb(191, 227, 248),
+    skyblue
+  );
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  animation-name: skycolor;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.sun {
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  top: 250px;
+  left: 0px;
+  animation-name: sun;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.grass {
+  background-color: green;
+  height: 100vh;
+  margin-top: 300px;
+  width: 100%;
+  z-index: 1;
+}
+
+.cloud {
+  position: absolute;
+  animation-name: cloud;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+.cloud.cloud1 {
+  top: 50px;
+  animation-duration: 20s;
+}
+
+.cloud.cloud2 {
+  top: 100px;
+  left: 50%;
+  animation-duration: 15s;
+}
+
+.cloud .left {
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 45%;
+  position: absolute;
+  top: 12.5px;
+}
+
+.cloud .right {
+  background-color: #fff;
+  height: 60px;
+  width: 70px;
+  border-radius: 45%;
+  position: absolute;
+  top: 12.5px;
+  left: 90px;
+}
+
+.cloud .middle {
+  background-color: #fff;
+  height: 75px;
+  width: 75px;
+  border-radius: 45%;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+}
+
+.king {
+  position: relative;
+  z-index: 10;
+  top: 539px;
+  right: 47vw;
+  margin: 1% auto;
+  width: 31px;
+  height: 22px;
+  background: url(../images/WalkingCharacters.png);
+  animation: play 8s steps(23) infinite;
+}
+
+.castle {
+  position: relative;
+  top: 397px;
+  left: 714px;
+  width: 139px;
+  height: 225px;
+  background: url(../images/castle.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@keyframes play {
+  0% {
+    background-position: 0px;
+    right: 47vw;
+  }
+  100% {
+    background-position: -719px;
+    right: -10vw;
+  }
+}
+
+@keyframes skycolor {
+  0% {
+    background-color: #1b2b34;
+  }
+  10% {
+    background-color: pink;
+  }
+  30% {
+    background-color: skyblue;
+  }
+  70% {
+    background-color: skyblue;
+  }
+  90% {
+    background-color: pink;
+  }
+  100% {
+    background-color: #1b2b34;
+  }
+}
+
+@keyframes sun {
+  0% {
+    background-color: orange;
+    top: 250px;
+    left: 0%;
+  }
+  25% {
+    background-color: yellow;
+    top: 125px;
+    left: 30%;
+    transform: scale(1.25);
+  }
+  50% {
+    background-color: yellow;
+    top: 0px;
+    left: 50%;
+    transform: scale(1.5);
+  }
+  75% {
+    background-color: yellow;
+    top: 125px;
+    left: 70%;
+    transform: scale(1.25);
+  }
+  100% {
+    background-color: red;
+    top: 250px;
+    left: 100%;
+  }
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
